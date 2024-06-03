@@ -33,7 +33,7 @@ jobs:
         distribution: 'temurin'
     - name: Build with Maven
       run: |
-        mvn install -D db=mysql
+        mvn -X install -D db=mysql
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
