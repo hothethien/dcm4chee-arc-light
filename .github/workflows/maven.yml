@@ -21,10 +21,10 @@ jobs:
 
     steps:
                     
-    - name: Generate settings.xml for Maven Builds   
-      uses: whelk-io/maven-settings-xml-action@v22
-      with:
-        repositories: '[{ "id": "1-dcm4che", "url": "https://maven.dcm4che.org", "snapshots.enabled": "false"}, {"id": "2-central", "url":"https://repo.maven.apache.org/maven2",  "snapshots.enabled": "false"}]'
+    # - name: Generate settings.xml for Maven Builds   
+    #   uses: whelk-io/maven-settings-xml-action@v22
+    #   with:
+    #     repositories: '[{ "id": "1-dcm4che", "url": "https://maven.dcm4che.org", "snapshots.enabled": "false"}, {"id": "2-central", "url":"https://repo.maven.apache.org/maven2",  "snapshots.enabled": "false"}]'
     - uses: actions/checkout@v4
     - name: Set up JDK 17
       uses: actions/setup-java@v3
