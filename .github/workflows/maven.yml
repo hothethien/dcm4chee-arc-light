@@ -24,7 +24,7 @@ jobs:
     - name: Generate settings.xml for Maven Builds   
       uses: whelk-io/maven-settings-xml-action@v22
       with:
-        repositories: '[{ "id": "1-dcm4che", "url": "https://maven.dcm4che.org" }, {"id": "2-central", "url":"https://repo.maven.apache.org/maven2"}]'
+        repositories: '[{ "id": "1-dcm4che", "url": "https://maven.dcm4che.org", "snapshots.enabled": "false"}, {"id": "2-central", "url":"https://repo.maven.apache.org/maven2",  "snapshots.enabled": "false"}]'
     - uses: actions/checkout@v4
     - name: Set up JDK 17
       uses: actions/setup-java@v3
@@ -33,7 +33,7 @@ jobs:
         distribution: 'temurin'
     - name: Build with Maven
       run: |
-        ./mvnw -o install -D db=mysql
+        ./mvnw install -D db=mysql
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
