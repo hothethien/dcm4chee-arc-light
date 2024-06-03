@@ -24,7 +24,7 @@ jobs:
     - name: Generate settings.xml for Maven Builds   
       uses: whelk-io/maven-settings-xml-action@v22
       with:
-        repositories: '[{ "id": "1-dcm4che", "url": "https://maven.dcm4che.org" }, {"id": "2-central", "url":"ttps://repo.maven.apache.org/maven2"}]'
+        repositories: '[{ "id": "1-dcm4che", "url": "https://maven.dcm4che.org" }, {"id": "2-central", "url":"https://repo.maven.apache.org/maven2"}]'
     - uses: actions/checkout@v4
     - name: Set up JDK 17
       uses: actions/setup-java@v3
